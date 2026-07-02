@@ -194,7 +194,7 @@
   .cwk{position:relative;border-bottom:1px solid var(--line2)}
   .cwk:last-child{border-bottom:0}
   .cbglayer{display:grid;grid-template-columns:repeat(7,1fr);position:absolute;inset:0;pointer-events:none;z-index:0}
-  .cbg{border-right:1px solid var(--line2)}
+  .cbg{border-right:1px solid var(--line2);pointer-events:auto}
   .cbg.last{border-right:0}
   .cbg.out{background:#FAFAFB}
   .cbg.today{background:#F0F1F4}
@@ -220,9 +220,10 @@
   .cev.ms{background:transparent;box-shadow:none;font-weight:600}
   .cev .cdia{display:inline-block;width:8px;height:8px;background:var(--accent);transform:rotate(45deg);
     border-radius:2px;margin-right:5px;vertical-align:-1px}
-  .cev .rs{position:absolute;top:0;bottom:0;width:7px;cursor:ew-resize;z-index:3}
-  .cev .rs-l{left:0}.cev .rs-r{right:0}
-  .cev:hover .rs{background:rgba(20,22,28,.10)}
+  .cev .rs{position:absolute;top:0;bottom:0;width:11px;cursor:ew-resize;z-index:3;pointer-events:auto}
+  .cev .rs-l{left:0;border-radius:5px 0 0 5px}.cev .rs-r{right:0;border-radius:0 5px 5px 0}
+  .cev:hover .rs{background:rgba(20,22,28,.12)}
+  .cal.caldrag .cev .rs{pointer-events:none}
   .swatches{display:flex;flex-wrap:wrap;gap:7px}
   .sw{width:30px;height:26px;border-radius:7px;border:1px solid var(--line);cursor:pointer;
     padding:0;position:relative;transition:.12s}
